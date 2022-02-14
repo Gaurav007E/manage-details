@@ -8,7 +8,7 @@
                 <div class="bootstrap-modal">
                     <div class="modal fade" id="addMaintitle">
                         <div class="modal-dialog" role="document">
-                            <form method="POST" id="add_main_title" name="add_main_title">
+                            <form id="add_main_title" name="add_main_title">
                                 @csrf
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -21,7 +21,7 @@
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary btn-cancel" data-dismiss="modal">Close</button>
-                                        <button type="button" id="submit" class="btn btn-primary">Save</button>
+                                        <button type="submit" id="submit" class="btn btn-primary">Save</button>
                                     </div>
                                 </div>
                             </form>
@@ -35,6 +35,7 @@
 @endsection
 @push('fornt-script')
 <script>
+
     $(document).on('click', '.btn-cancel', function() {
         $('#add_main_title').trigger('reset');
     })  
@@ -51,7 +52,7 @@
             data: $('#add_main_title').serialize(),
             success: function(res) {
                 if (res == 1) {
-                    $('#quixnav').load("#quixnav");
+                    $( "#quixnav" ).load(window.location.href + " #quixnav" );
                     $('#addMaintitle').modal('hide');
                     $('#add_main_title').trigger('reset');
                 }
