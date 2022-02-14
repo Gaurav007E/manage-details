@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MainTitleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('front/home');
-});
+// Route::get('/', function () {
+//     return view('front/home');
+// });
+
+// Route::post('AddMainTitle',[MainTitleController::class,'addMainTitle'])->name('addmaintitle');
+
+Route::get('/', 'MainTitleController@index');
+Route::post('AddMainTitle', 'MainTitleController@addMainTitle')->name('addmaintitle');

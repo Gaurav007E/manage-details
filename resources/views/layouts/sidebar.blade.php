@@ -1,8 +1,9 @@
-<div class="quixnav">
+<div class="quixnav" id="quixnav">
     <div class="quixnav-scroll">
         <ul class="metismenu" id="menu">
-            <li class="nav-label">Navigation</li>
-            <li><a href="index.html"><span class="nav-text">Project 1</span></a></li>
+            @foreach($titles as $title)
+            <li><a href="index.html"><span class="nav-text">{{$title->title}}</span></a></li>
+            @endforeach
         </ul>
     </div>
 </div>

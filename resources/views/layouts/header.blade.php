@@ -29,7 +29,7 @@
                 </div>
 
                 <ul class="navbar-nav header-right">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicModal">Add New Keep</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addMaintitle">Add New Keep</button>
                 </ul>
             </div>
         </nav>
