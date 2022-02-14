@@ -13271,4 +13271,18 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="overlay"] .content-body {
 [data-theme-version="dark"] .loader__ball {
   background: #7367F0; }
 
+
+  [data-sidebar-style="modern"][data-layout="vertical"] .quixnav {
+    width: 15rem; }
+
+    .quixnav-scroll ul li.active a {
+      background-color: rgb(255, 255, 255);
+      font-family: Muli-Bold;
+      color: rgb(170, 0, 255);
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px;
+      padding-left: 22px;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+      min-width: 140px;
+  }
 /*# sourceMappingURL=style.css.map */
